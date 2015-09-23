@@ -1,2 +1,2 @@
 # TrippyBackgrounds
-Easy way to create an iOS-SpriteKit triply backgrounds
+Easy way to create an iOS-SpriteKit trippy backgrounds.
