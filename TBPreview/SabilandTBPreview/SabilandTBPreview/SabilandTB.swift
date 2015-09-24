@@ -120,6 +120,7 @@ class SabilandTB: NSObject {
     init(width:CGFloat, height:CGFloat)
     {
         super.init()
+        precondition(width >= 1.0 && height >= 1.0, "WIDTH and HEIGHT must be >= 1.0")
         BackDimensionMax = max(width, height)
         BackRect = CGRectMake(0.0, 0.0, BackDimensionMax, BackDimensionMax)
         setupBackground()
@@ -875,7 +876,7 @@ class SabilandTB: NSObject {
                 drawCirclesOrSquaresOverlay(ctx!)
                 drawTriangles(ctx!)
             }
-               
+            
         }
         
         SabilandTrippyBackground = UIGraphicsGetImageFromCurrentImageContext()

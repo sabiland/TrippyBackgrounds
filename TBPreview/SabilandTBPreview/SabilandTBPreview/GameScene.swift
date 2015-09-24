@@ -64,13 +64,13 @@ class GameScene: SKScene {
         let rotatingAngle2:CGFloat = -rotatingAngle1
         
         let backgroundRotatorSequence = SKAction.sequence([
-            SKAction.rotateByAngle(rotatingAngle1, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundRotatingIntervalMin, max: BackgroundRotatingIntervalMax, includeMax: true)))),
-            SKAction.rotateByAngle(rotatingAngle2, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundRotatingIntervalMin, max: BackgroundRotatingIntervalMax, includeMax: true))))
-            ])
+        SKAction.rotateByAngle(rotatingAngle1, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundRotatingIntervalMin, max: BackgroundRotatingIntervalMax, includeMax: true)))),
+        SKAction.rotateByAngle(rotatingAngle2, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundRotatingIntervalMin, max: BackgroundRotatingIntervalMax, includeMax: true))))
+        ])
         let backgroundScaleSequence = SKAction.sequence([
-            SKAction.scaleTo(1.2 + (Helper.random01CGFloat() / 3.0), duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundScalingIntervalMin, max: BackgroundScalingIntervalMax, includeMax: true)))),
-            SKAction.scaleTo(1.0, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundScalingIntervalMin, max: BackgroundScalingIntervalMax, includeMax: true))))
-            ])
+        SKAction.scaleTo(1.2 + (Helper.random01CGFloat() / 3.0), duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundScalingIntervalMin, max: BackgroundScalingIntervalMax, includeMax: true)))),
+        SKAction.scaleTo(1.0, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundScalingIntervalMin, max: BackgroundScalingIntervalMax, includeMax: true))))
+        ])
         
         STB.runAction(SKAction.repeatActionForever(backgroundRotatorSequence))
         STB.runAction(SKAction.repeatActionForever(backgroundScaleSequence))*/
