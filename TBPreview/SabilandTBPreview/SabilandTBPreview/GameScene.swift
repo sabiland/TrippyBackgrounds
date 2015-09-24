@@ -53,7 +53,7 @@ class GameScene: SKScene {
         let imageEngine = SabilandTB(width: MasterView.frame.width, height: MasterView.frame.height)
         let sprite = SKSpriteNode(texture: SKTexture(CGImage: imageEngine.SabilandTrippyBackground.CGImage!))
         STB = SKNode()
-        STB.addChild(createTextureFromShapeNode(sprite))
+        STB.addChild(sprite)
         STB.zPosition = 100.0
         STB.position = CGPointMake(MasterView.frame.midX, MasterView.frame.midY)
         self.addChild(STB)
@@ -74,11 +74,6 @@ class GameScene: SKScene {
         
         STB.runAction(SKAction.repeatActionForever(backgroundRotatorSequence))
         STB.runAction(SKAction.repeatActionForever(backgroundScaleSequence))*/
-    }
-    
-    private func createTextureFromShapeNode(input:SKNode) -> SKSpriteNode
-    {
-        return SKSpriteNode(texture: MasterView.textureFromNode(input))
     }
     
 }
