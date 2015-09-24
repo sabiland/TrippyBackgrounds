@@ -8,6 +8,11 @@
 
 import SpriteKit
 
+private let BackgroundRotatingIntervalMin:Int = 30
+private let BackgroundRotatingIntervalMax:Int = 40
+private let BackgroundScalingIntervalMin:Int = 15
+private let BackgroundScalingIntervalMax:Int = 40
+
 class GameScene: SKScene {
     
     var MasterView:SKView!
@@ -43,15 +48,31 @@ class GameScene: SKScene {
             STB.removeAllActions()
             STB.removeFromParent()
         }
-                
+        
         let imageEngine = SabilandTB(width: MasterView.frame.width, height: MasterView.frame.height)
         let sprite = SKSpriteNode(texture: SKTexture(CGImage: imageEngine.SabilandTrippyBackground.CGImage!))
         STB = SKNode()
         STB.addChild(createTextureFromShapeNode(sprite))
         STB.zPosition = 100.0
         STB.position = CGPointMake(MasterView.frame.midX, MasterView.frame.midY)
-        //STB.position = CGPointMake(300.0, 300.0)
         self.addChild(STB)
+        
+        let rotatingAngle1:CGFloat = Helper.fiftyFiftyOnePlusMinus() * CGFloat(M_PI_2)
+        // NOTE: Reverse angle 2
+        let rotatingAngle2:CGFloat = -rotatingAngle1
+        
+        
+        let backgroundRotatorSequence = SKAction.sequence([
+            SKAction.rotateByAngle(rotatingAngle1, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundRotatingIntervalMin, max: BackgroundRotatingIntervalMax, includeMax: true)))),
+            SKAction.rotateByAngle(rotatingAngle2, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundRotatingIntervalMin, max: BackgroundRotatingIntervalMax, includeMax: true))))
+            ])
+        let backgroundScaleSequence = SKAction.sequence([
+            SKAction.scaleTo(1.2 + (Helper.random01CGFloat() / 3.0), duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundScalingIntervalMin, max: BackgroundScalingIntervalMax, includeMax: true)))),
+            SKAction.scaleTo(1.0, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundScalingIntervalMin, max: BackgroundScalingIntervalMax, includeMax: true))))
+            ])
+        
+        STB.runAction(SKAction.repeatActionForever(backgroundRotatorSequence))
+        STB.runAction(SKAction.repeatActionForever(backgroundScaleSequence))
     }
     
     private func createTextureFromShapeNode(input:SKNode) -> SKSpriteNode
