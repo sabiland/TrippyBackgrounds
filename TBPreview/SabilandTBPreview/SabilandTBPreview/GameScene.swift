@@ -10,8 +10,8 @@ import SpriteKit
 
 private let BackgroundRotatingIntervalMin:Int = 30
 private let BackgroundRotatingIntervalMax:Int = 40
-private let BackgroundScalingIntervalMin:Int = 15
-private let BackgroundScalingIntervalMax:Int = 40
+private let BackgroundScalingIntervalMin:Int = 3
+private let BackgroundScalingIntervalMax:Int = 5
 
 class GameScene: SKScene {
     
@@ -57,10 +57,10 @@ class GameScene: SKScene {
         STB.position = CGPointMake(MasterView.frame.midX, MasterView.frame.midY)
         self.addChild(STB)
         
-        let rotatingAngle1:CGFloat = Helper.fiftyFiftyOnePlusMinus() * CGFloat(M_PI_2)
-        // NOTE: Reverse angle 2
+        // NOTE: Uncomment this for nice simple rotate/scale animation
+        /*let rotatingAngle1:CGFloat = Helper.fiftyFiftyOnePlusMinus() * CGFloat(M_PI_2)
+        // NOTE: Reverse angle
         let rotatingAngle2:CGFloat = -rotatingAngle1
-        
         
         let backgroundRotatorSequence = SKAction.sequence([
             SKAction.rotateByAngle(rotatingAngle1, duration: NSTimeInterval(CGFloat(Helper.randomBetween(BackgroundRotatingIntervalMin, max: BackgroundRotatingIntervalMax, includeMax: true)))),
@@ -72,7 +72,7 @@ class GameScene: SKScene {
             ])
         
         STB.runAction(SKAction.repeatActionForever(backgroundRotatorSequence))
-        STB.runAction(SKAction.repeatActionForever(backgroundScaleSequence))
+        STB.runAction(SKAction.repeatActionForever(backgroundScaleSequence))*/
     }
     
     private func createTextureFromShapeNode(input:SKNode) -> SKSpriteNode
