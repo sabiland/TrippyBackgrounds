@@ -37,20 +37,18 @@ class GameScene: SKScene {
     
     private func setNewSabilandTrippyBackground()
     {
-     
+        if STB != nil
+        {
+            STB.removeFromParent()
+        }
         
-        /*let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.addChild(SKSpriteNode(texture: SKTexture(CGImage: image.CGImage!)))
-        
-        
-        self.GameBackground = DodgieCommon.createTextureFromShapeNode(Background2(), masterSKView: self.MasterSKView)
-        self.GameBackground.zPosition = -1.0
-        self.GameBackground.position = MasterBordersCenter
-
-        
-        */
-        
+        let imageEngine = SabilandTB(width: MasterView.frame.width, height: MasterView.frame.height)
+        let sprite = SKSpriteNode(texture: SKTexture(CGImage: imageEngine.SabilandTrippyBackground.CGImage!))
+        STB = SKNode()
+        STB.addChild(createTextureFromShapeNode(sprite))
+        STB.zPosition = 100.0
+        STB.position = CGPointMake(MasterView.frame.midX, MasterView.frame.midY)
+        self.addChild(STB)
     }
     
     private func createTextureFromShapeNode(input:SKNode) -> SKSpriteNode
