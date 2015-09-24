@@ -16,6 +16,7 @@
 		122456FD1BB3C48600317A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122456FB1BB3C48600317A06 /* LaunchScreen.storyboard */; };
 		122457081BB3C48600317A06 /* SabilandTBPreviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122457071BB3C48600317A06 /* SabilandTBPreviewTests.swift */; };
 		122457131BB3C48600317A06 /* SabilandTBPreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122457121BB3C48600317A06 /* SabilandTBPreviewUITests.swift */; };
+		122457211BB3C5D700317A06 /* SabilandTB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122457201BB3C5D700317A06 /* SabilandTB.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1224570E1BB3C48600317A06 /* SabilandTBPreviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabilandTBPreviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		122457121BB3C48600317A06 /* SabilandTBPreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabilandTBPreviewUITests.swift; sourceTree = "<group>"; };
 		122457141BB3C48600317A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		122457201BB3C5D700317A06 /* SabilandTB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SabilandTB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				122456F91BB3C48600317A06 /* Assets.xcassets */,
 				122456FB1BB3C48600317A06 /* LaunchScreen.storyboard */,
 				122456FE1BB3C48600317A06 /* Info.plist */,
+				122457201BB3C5D700317A06 /* SabilandTB.swift */,
 			);
 			path = SabilandTBPreview;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				122456F31BB3C48600317A06 /* GameScene.swift in Sources */,
 				122456F51BB3C48600317A06 /* GameViewController.swift in Sources */,
 				122456EF1BB3C48600317A06 /* AppDelegate.swift in Sources */,
+				122457211BB3C5D700317A06 /* SabilandTB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
