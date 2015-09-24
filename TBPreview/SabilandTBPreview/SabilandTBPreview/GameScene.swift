@@ -48,6 +48,7 @@ class GameScene: SKScene {
         STB.addChild(createTextureFromShapeNode(sprite))
         STB.zPosition = 100.0
         STB.position = CGPointMake(MasterView.frame.midX, MasterView.frame.midY)
+        //STB.position = CGPointMake(300.0, 300.0)
         self.addChild(STB)
     }
     

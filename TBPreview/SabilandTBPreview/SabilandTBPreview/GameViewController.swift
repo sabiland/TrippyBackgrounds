@@ -13,6 +13,11 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.

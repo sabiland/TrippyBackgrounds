@@ -121,7 +121,7 @@ class SabilandTB: NSObject {
     {
         super.init()
         BackDimensionMax = max(width, height)
-        BackRect = CGRectMake(0.0, 0.0, width, height)
+        BackRect = CGRectMake(0.0, 0.0, BackDimensionMax, BackDimensionMax)
         setupBackground()
     }
     
