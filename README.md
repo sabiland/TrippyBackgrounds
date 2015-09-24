@@ -13,6 +13,7 @@ SabilandTB.swift
 Usage (generated image is **SQUARE** -> *max(width, height)*)
 
 ```swift
+// NOTE: WIDTH and HEIGHT must be >= 1.0
 let generator = SabilandTB(width: 500.0, height: 200.0)
 let trippyImage = generator.SabilandTrippyBackground
 ```
