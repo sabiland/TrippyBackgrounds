@@ -23,10 +23,11 @@ class GameScene: SKScene {
         
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 20;
+        myLabel.text = "TAP for new TrippyBackground";
+        myLabel.fontSize = 15;
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:10.0);
         myLabel.zPosition = 1000.0
+        myLabel.fontColor = UIColor.yellowColor()
         self.addChild(myLabel)
         setNewSabilandTrippyBackground()
     }
