@@ -39,9 +39,11 @@ class GameScene: SKScene {
     {
         if STB != nil
         {
+            STB.removeAllChildren()
+            STB.removeAllActions()
             STB.removeFromParent()
         }
-        
+                
         let imageEngine = SabilandTB(width: MasterView.frame.width, height: MasterView.frame.height)
         let sprite = SKSpriteNode(texture: SKTexture(CGImage: imageEngine.SabilandTrippyBackground.CGImage!))
         STB = SKNode()
