@@ -104,13 +104,13 @@
 			isa = PBXGroup;
 			children = (
 				122456EE1BB3C48600317A06 /* AppDelegate.swift */,
+				122456F91BB3C48600317A06 /* Assets.xcassets */,
 				122456F01BB3C48600317A06 /* GameScene.sks */,
 				122456F21BB3C48600317A06 /* GameScene.swift */,
 				122456F41BB3C48600317A06 /* GameViewController.swift */,
-				122456F61BB3C48600317A06 /* Main.storyboard */,
-				122456F91BB3C48600317A06 /* Assets.xcassets */,
-				122456FB1BB3C48600317A06 /* LaunchScreen.storyboard */,
 				122456FE1BB3C48600317A06 /* Info.plist */,
+				122456FB1BB3C48600317A06 /* LaunchScreen.storyboard */,
+				122456F61BB3C48600317A06 /* Main.storyboard */,
 				122457201BB3C5D700317A06 /* SabilandTB.swift */,
 			);
 			path = SabilandTBPreview;

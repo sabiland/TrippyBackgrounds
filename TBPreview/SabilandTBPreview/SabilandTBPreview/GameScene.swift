@@ -9,7 +9,13 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var MasterView:SKView!
+    var STB:SKNode!
+    
     override func didMoveToView(view: SKView) {
+        MasterView = view
+        
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
         myLabel.text = "Hello, World!";
@@ -31,7 +37,25 @@ class GameScene: SKScene {
     
     private func setNewSabilandTrippyBackground()
     {
+     
         
+        /*let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.addChild(SKSpriteNode(texture: SKTexture(CGImage: image.CGImage!)))
+        
+        
+        self.GameBackground = DodgieCommon.createTextureFromShapeNode(Background2(), masterSKView: self.MasterSKView)
+        self.GameBackground.zPosition = -1.0
+        self.GameBackground.position = MasterBordersCenter
+
+        
+        */
+        
+    }
+    
+    private func createTextureFromShapeNode(input:SKNode) -> SKSpriteNode
+    {
+        return SKSpriteNode(texture: MasterView.textureFromNode(input))
     }
     
 }
