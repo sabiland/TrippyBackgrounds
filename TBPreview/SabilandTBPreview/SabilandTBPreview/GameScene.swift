@@ -13,14 +13,14 @@ class GameScene: SKScene {
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
         myLabel.text = "Hello, World!";
-        myLabel.fontSize = 45;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
+        myLabel.fontSize = 40;
+        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:10.0);
+        myLabel.zPosition = 1000.0
         self.addChild(myLabel)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
+        /* Called when a touch begins */
         
         for touch in touches {
             let location = touch.locationInNode(self)
@@ -38,7 +38,7 @@ class GameScene: SKScene {
             self.addChild(sprite)
         }
     }
-   
+    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
